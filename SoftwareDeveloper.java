@@ -4,9 +4,13 @@ public class SoftwareDeveloper {
     private IProgrammingLanguage language;
 
     public SoftwareDeveloper(IProgrammingLanguage language){
-        if (hasBudget){
+        if (hasBudget()){
             this.language = language;
             dev_count++;
+            System.out.println(dev_count);
+        }
+        else {
+            System.out.println("Come on bro, we dont have budget...");
         }
     }
 
@@ -14,9 +18,12 @@ public class SoftwareDeveloper {
         this.language = language;
     }
 
+    public void code(){
+        this.language.work();
+    }
+
     private boolean hasBudget(){
         if (dev_count > 3){
-            System.out.println("Come on bro, we dont have budget...");
             return false;
         }
         return true;
