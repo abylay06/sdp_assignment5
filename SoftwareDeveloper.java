@@ -23,7 +23,7 @@ public class SoftwareDeveloper {
     }
 
     private boolean hasBudget(){
-        if (dev_count > 3){
+        if (dev_count >= 3){
             return false;
         }
         return true;
