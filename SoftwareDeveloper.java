@@ -1,5 +1,5 @@
 public class SoftwareDeveloper {
-    public static int MAX_DEVELOPER = 100;
+    public static int MAX_DEVELOPERS = 3;
     private static int dev_count = 0;
     private IProgrammingLanguage language;
 
@@ -23,7 +23,7 @@ public class SoftwareDeveloper {
     }
 
     private boolean hasBudget(){
-        if (dev_count >= 3){
+        if (dev_count >= MAX_DEVELOPERS){
             return false;
         }
         return true;
